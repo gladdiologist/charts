@@ -3,9 +3,9 @@ entries:
   sparkoperator:
   - apiVersion: v1
     appVersion: v1beta2-1.1.0-2.4.5
-    created: "2020-03-04T10:16:14.215046796Z"
+    created: "2020-03-04T10:21:25.434322509Z"
     description: A Helm chart for Spark on Kubernetes operator
-    digest: 4704e81cfe2efc22e03e7223fbfe0ff2f0de6b4f9dddc56c29e7e88220057cbd
+    digest: e1550ff19eb5591deb7bb4d083189bd4e2bd82bb78c6a17bb0384dc940b48e80
     home: https://github.com/GoogleCloudPlatform/spark-on-k8s-operator
     keywords:
     - spark
@@ -16,4 +16,4 @@ entries:
     urls:
     - sparkoperator-0.6.6.tgz
     version: 0.6.6
-generated: "2020-03-04T10:16:14.211416595Z"
+generated: "2020-03-04T10:21:25.430546109Z"
