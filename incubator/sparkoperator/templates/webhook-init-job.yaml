@@ -7,6 +7,7 @@ metadata:
   annotations:
     "helm.sh/hook": pre-install, pre-upgrade
     "helm.sh/hook-delete-policy": hook-succeeded
+    "helm.sh/hook-weight": "10"
   labels:
     app.kubernetes.io/name: {{ include "sparkoperator.name" . }}
     helm.sh/chart: {{ include "sparkoperator.chart" . }}
