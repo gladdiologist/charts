@@ -15,6 +15,12 @@ metadata:
 spec:
   template:
     spec:
+      {{- if .Values.securityContext }}
+      securityContext:
+        {{- range $securityPolicy, $value := .Values.securityContext }}
+          {{ $securityPolicy }}: {{ $value }}
+        {{- end }}
+      {{- end }}
       serviceAccountName: {{ include "sparkoperator.serviceAccountName" . }}
       restartPolicy: OnFailure
       imagePullSecrets:
