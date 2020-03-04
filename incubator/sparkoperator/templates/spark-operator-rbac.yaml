@@ -8,6 +8,9 @@ metadata:
     helm.sh/chart: {{ include "sparkoperator.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
+  annotations:
+    "helm.sh/hook": pre-install
+    "helm.sh/hook-weight": "3"
 rules:
 - apiGroups: [""]
   resources: ["pods"]
