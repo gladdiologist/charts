@@ -47,6 +47,11 @@ spec:
         - name: webhook-certs
           secret:
             secretName: spark-webhook-certs
+        {{- if .Values.enablePodTemplate }}
+        - name: spark-pod-template
+          configMap:
+            name: {{ .Values.podTemplateConfigMap }}
+        {{- end }}
       {{- end }}
       containers:
       - name: sparkoperator
@@ -62,6 +67,10 @@ spec:
         volumeMounts:
           - name: webhook-certs
             mountPath: /etc/webhook-certs
+          {{- if .Values.enablePodTemplate }}
+          - name: spark-pod-template
+            mountPath: /etc/pod-templates
+          {{- end }}
         {{- end }}
         {{- if .Values.enableMetrics }}
         ports:

@@ -26,6 +26,9 @@ securityContext: {}
 enableWebhook: false
 webhookPort: 8080
 
+enablePodTemplate: false
+podTemplateConfigmap: "spark-pod-template"
+
 enableMetrics: true
 metricsPort: 10254
 metricsEndpoint: "/metrics"
